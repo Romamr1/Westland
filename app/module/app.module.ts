@@ -6,18 +6,20 @@ import {Routes, RouterModule} from '@angular/router';
 import { AppComponent }   from '../components/app.component';
 import { KandidateComponent }   from '../components/kandidateComponent/kandidate.component';
 import { HomeComponent }   from '../components/homeComponent/home.component';
+import { VacaturesComponent }   from '../components/vacaturesComponent/vacatures.component';
 import { NotFoundComponent }   from '../components/notFoundComponent/notFound.component';
 
 // определение маршрутов
 const appRoutes: Routes =[
-    { path: '', component: HomeComponent},
+    { path: 'vacatures', component: VacaturesComponent},
     { path: 'kendidate', component: KandidateComponent},
-    { path: '**', component: NotFoundComponent }
+    { path: '', component: HomeComponent},
+    { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
     imports:      [ BrowserModule, RouterModule.forRoot(appRoutes)],
-    declarations: [ AppComponent, HomeComponent, KandidateComponent, NotFoundComponent],
+    declarations: [ AppComponent, HomeComponent, KandidateComponent, NotFoundComponent, VacaturesComponent],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

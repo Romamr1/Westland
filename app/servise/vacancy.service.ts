@@ -1,6 +1,7 @@
 export class Vacancy {
 
     constructor(
+      public id: number,
       public jobTitle: string,
       public functionTitle: string,
       public company: string,
@@ -17,6 +18,7 @@ export class VacancyService{
 
     private data: Vacancy[] = [
         {
+          id: 1,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -28,6 +30,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 2,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -39,6 +42,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 3,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -50,6 +54,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 4,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -61,6 +66,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 5,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -72,6 +78,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 6,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -83,6 +90,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 7,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -94,6 +102,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 8,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -105,6 +114,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 9,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -116,6 +126,7 @@ export class VacancyService{
           salary: 14000
         },
         {
+          id: 10,
           jobTitle: 'Looking for a business analyst!',
           functionTitle: 'Business analyst',
           company: 'Alfa bank',
@@ -132,5 +143,8 @@ export class VacancyService{
     }
     getFilterData(): Vacancy[] {
         return this.data;
+    }
+    getVacancy(id): Vacancy {
+      return this.data[id];
     }
 }

@@ -28,7 +28,7 @@
   <div id="vacSection">
     <h2>Uitgelichte vacatures</h2>
     <div>
-      <div *ngFor="let vacancy of vacancies" class="vacancy">
+      <div *ngFor="let vacancy of vacancies" class="vacancy" [routerLink]="['/vacatures', vacancy.id]">
         <p class="salary bold">{{vacancy.salary}}</p>
         <p class="jobTitle">{{vacancy.jobTitle}}</p>
         <p class="bold">{{vacancy.functionTitle}}</p>

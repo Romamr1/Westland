@@ -305,5 +305,5 @@
 
 #parentVacancies {
   background: url(/css/img/vacanciesBackground.jpg)no-repeat;
-  background-size: cover;
+  background-size: contain;
 }

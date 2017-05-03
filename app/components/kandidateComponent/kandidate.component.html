@@ -6,7 +6,8 @@
         <div id="KandidateFormSec1">
           <label>Trefwoord <input type="text" name="filter" id="textFilter" /></label>
           <br />
-          <label>Upload hier uw CV <input type="file" name="file" /> </label>
+          <div><a href="" class="bold upload-cv">Upload hier uw CV</a></div>
+          <!-- <button (click)="openCustom()">Custom Modal</button>    -->       
         </div>
         <div id="KandidateFormSec2">
           <a href="/vacatures" class="kandidateFormButton">Zoek...</a><br />
@@ -26,7 +27,9 @@
   </div>
 
   <div id="vacSection">
-    <h2>Uitgelichte vacatures</h2>
+    <div class="kandidate-header">
+      <h2 class="kandidate-header">Uitgelichte vacatures</h2>
+    </div>
     <div>
       <div *ngFor="let vacancy of vacancies" class="vacancy" [routerLink]="['/vacatures', vacancy.id]">
         <p class="salary bold">{{vacancy.salary}}</p>
@@ -34,8 +37,7 @@
         <p class="bold">{{vacancy.functionTitle}}</p>
         <p>{{vacancy.company}}</p>
         <p class="bold">{{vacancy.place}}</p>
-        <p>{{vacancy.education}} {{vacancy.contactOfService}}</p>
-        <p>{{vacancy.functionDescription}}</p>
+        <p>{{vacancy.education}} {{vacancy.contactOfService}}</p>        
         <p>{{vacancy.contactInformation}}</p>
       </div>
     </div>

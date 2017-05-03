@@ -144,7 +144,7 @@ export class VacancyService{
     getFilterData(): Vacancy[] {
         return this.data;
     }
-    getVacancy(id): Vacancy {
+    getVacancy(id: number ): Vacancy {
       return this.data[id];
     }
 }

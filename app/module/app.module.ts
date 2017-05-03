@@ -10,6 +10,9 @@ import { VacaturesComponent }   from '../components/vacaturesComponent/vacatures
 import { VacancyComponent }   from '../components/vacancyComponent/vacancy.component';
 import { NotFoundComponent }   from '../components/notFoundComponent/notFound.component';
 
+import { ModalModule } from 'angular2-modal';
+import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
+
 // определение маршрутов
 const appRoutes: Routes =[
     { path: 'vacatures', component: VacaturesComponent},
@@ -20,7 +23,9 @@ const appRoutes: Routes =[
 ];
 
 @NgModule({
-    imports:      [ BrowserModule, RouterModule.forRoot(appRoutes)],
+    imports:      [ BrowserModule, 
+                    RouterModule.forRoot(appRoutes), 
+                    ],
     declarations: [ AppComponent,
                     HomeComponent,
                     KandidateComponent,
